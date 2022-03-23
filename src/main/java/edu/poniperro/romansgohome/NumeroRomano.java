@@ -2,6 +2,8 @@ package edu.poniperro.romansgohome;
 
 
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class NumeroRomano {
     private String numeroRomano;
@@ -17,10 +19,18 @@ public class NumeroRomano {
     }
 
     public int toDecimal() {
-        if(this.numeroRomano.matches("M")) {
-            return regexs.get("M");
+        Pattern p = Pattern.compile("M");
+        Matcher m = p.matcher(getNumeroRomano());
+
+        int numeroDecimal = 0;
+
+        while(m.find()) {
+            numeroDecimal += regexs.get("M");
         }
-        return 0;
+        return numeroDecimal;
     }
-    
+
+    public String getNumeroRomano() {
+        return this.numeroRomano;
+    }
 }
