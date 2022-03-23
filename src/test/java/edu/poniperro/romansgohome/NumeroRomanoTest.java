@@ -29,13 +29,13 @@ public class NumeroRomanoTest {
         numeroRomano.setNumeroRomano(testCase);
         assertEquals(1000, numeroRomano.toDecimal());
 
-        // testCase = "UMMU";
-        // numeroRomano.setNumeroRomano(testCase);
-        // assertEquals(2000, numeroRomano.toDecimal());
+         testCase = "UMMU";
+         numeroRomano.setNumeroRomano(testCase);
+         assertEquals(2000, numeroRomano.toDecimal());
 
-        // testCase = "UMMMU";
-        // numeroRomano.setNumeroRomano(testCase);
-        // assertEquals(3000, numeroRomano.toDecimal());
+         testCase = "UMMMU";
+         numeroRomano.setNumeroRomano(testCase);
+         assertEquals(3000, numeroRomano.toDecimal());
 
         // testCase = "UCMU";
         // numeroRomano.setNumeroRomano(testCase);
