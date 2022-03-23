@@ -37,9 +37,9 @@ public class NumeroRomanoTest {
          numeroRomano.setNumeroRomano(testCase);
          assertEquals(3000, numeroRomano.toDecimal());
 
-        // testCase = "UCMU";
-        // numeroRomano.setNumeroRomano(testCase);
-        // assertNotEquals(1000, numeroRomano.toDecimal());
+         testCase = "UCMU";
+         numeroRomano.setNumeroRomano(testCase);
+         assertNotEquals(1000, numeroRomano.toDecimal());
 
         /**
          * El caso MMMM es control de errores 
@@ -49,13 +49,13 @@ public class NumeroRomanoTest {
          */
     }
 
-    // @Test
-    // public void tres_repeticiones_C_test() {
+     @Test
+     public void tres_repeticiones_C_test() {
 
-    //     String testCase = "UMMMUCCCU";
-    //     numeroRomano.setNumeroRomano(testCase);
-    //     assertEquals(3300, numeroRomano.toDecimal());
-    // }
+         String testCase = "UMMMUCCCU";
+         numeroRomano.setNumeroRomano(testCase);
+         assertEquals(3300, numeroRomano.toDecimal());
+     }
 
     // @Test
     // public void tres_repeticiones_X_test() {

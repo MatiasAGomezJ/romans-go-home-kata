@@ -12,6 +12,7 @@ public class NumeroRomano {
     public void initRegexDicionario() {
         regexs = new HashMap<>();
         regexs.put("M", 1000);
+        regexs.put("C", 100);
     }
 
     public void setNumeroRomano(String numeroRomano) {
@@ -19,13 +20,17 @@ public class NumeroRomano {
     }
 
     public int toDecimal() {
-        Pattern p = Pattern.compile("M");
-        Matcher m = p.matcher(getNumeroRomano());
-
         int numeroDecimal = 0;
 
-        while(m.find()) {
-            numeroDecimal += regexs.get("M");
+        for (String key :
+                regexs.keySet()) {
+
+            Pattern p = Pattern.compile(key);
+            Matcher m = p.matcher(getNumeroRomano());
+
+            while (m.find()) {
+                numeroDecimal += regexs.get(key);
+            }
         }
         return numeroDecimal;
     }
