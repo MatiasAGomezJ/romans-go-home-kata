@@ -12,7 +12,10 @@ public class NumeroRomano {
     public void initRegexDicionario() {
         regexs = new HashMap<>();
         regexs.put("M", 1000);
+        regexs.put("D", 500);
         regexs.put("C", 100);
+        regexs.put("X", 10);
+        regexs.put("I", 1);
     }
 
     public void setNumeroRomano(String numeroRomano) {
