@@ -47,35 +47,35 @@ public class RomanNumberTest {
         assertEquals(3300, numeroRomano.toDecimal());
     }
 
-//    @Test
-//    public void tres_repeticiones_X_test() {
-//
-//        String testCase = "UMMMUXXXU";
-//        numeroRomano = new RomanNumber(testCase);
-//
-//        assertEquals(3030, numeroRomano.toDecimal());
-//    }
+    @Test
+    public void tres_repeticiones_X_test() {
 
-//    @Test
-//    public void tres_repeticiones_I_test() {
-//
-//        String testCase = "UMMMUIIIU";
-//        numeroRomano = new RomanNumber(testCase);
-//
-//        assertEquals(3003, numeroRomano.toDecimal());
-//    }
+        String testCase = "UMMMUXXXU";
+        numeroRomano = new RomanNumber(testCase);
 
-//    @Test
-//    public void una_D_test() {
-//
-//        String testCase = "UMMMUDUIIIU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(3503, numeroRomano.toDecimal());
-//
-//        testCase = "MMMUCDUIIIU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertNotEquals(3503, numeroRomano.toDecimal());
-//    }
+        assertEquals(3030, numeroRomano.toDecimal());
+    }
+
+    @Test
+    public void tres_repeticiones_I_test() {
+
+        String testCase = "UMMMUIIIU";
+        numeroRomano = new RomanNumber(testCase);
+
+        assertEquals(3003, numeroRomano.toDecimal());
+    }
+
+    @Test
+    public void una_D_test() {
+
+        String testCase = "UMMMUDUIIIU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(3503, numeroRomano.toDecimal());
+
+        testCase = "MMMUCDUIIIU";
+        numeroRomano = new RomanNumber(testCase);
+        assertNotEquals(3503, numeroRomano.toDecimal());
+    }
 
 //    /**
 //     * Grupos sustractivos

@@ -53,7 +53,7 @@ public class RomanNumber {
     }
 
     private short getDecimalFrom(String group) {
-        return regexs.get(group);
+        return LetrasRomanas.valueOf(group).getValorDecimal();
     }
 
 
