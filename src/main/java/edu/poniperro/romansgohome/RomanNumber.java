@@ -32,7 +32,7 @@ public class RomanNumber {
             Matcher matcher = getMatcher(key);
 
             while (matcher.find()) {
-                short decimal = getDecimalFrom(matcher.group());
+                short decimal = decimalValue(matcher.group());
                 sumarDecimal(decimal);
             }
         }
@@ -43,7 +43,7 @@ public class RomanNumber {
         setNumeroDecimal((short) (getNumeroDecimal() + decimal));
     }
 
-    private short getDecimalFrom(String group) {
+    public short decimalValue(String group) {
         return LetrasRomanas.valueOf(group).getValorDecimal();
     }
 
@@ -54,7 +54,11 @@ public class RomanNumber {
     }
 
     private Collection<String> getRegexsValues() {
-        return regexs.getAllRegexs().values();
+        return regexs.getAllRegex();
+    }
+
+    public RomanNumberRegexs getRegexCollection() {
+        return regexs;
     }
 
     @Override

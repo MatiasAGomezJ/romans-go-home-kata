@@ -1,5 +1,6 @@
 package edu.poniperro.romansgohome;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 public class RomanNumberRegexs {
@@ -11,20 +12,20 @@ public class RomanNumberRegexs {
     }
 
     private void initRegexDicionario() {
-        addRegex("grupo sumatorio", "(?<!C)[MD]|(?<!X)[CL](?![DM])|(?<!I)[XV](?![LC])|[I](?![VX])");
-        addRegex("grupo sustractivo", "C[MD]|X[CL]|I[XV]");
+        addRegex("grupoSumatorio", "(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])");
+        addRegex("grupoSustractivo", "(C[DM])|(X[LC])|(I[VX])");
     }
 
     public void addRegex(String description, String regularExppresion) {
         regexs.putIfAbsent(description, regularExppresion);
     }
 
-    public String getRegexsByKey(String description) {
+    public String getRegex(String description) {
         return regexs.get(description);
     }
 
-    public HashMap<String, String> getAllRegexs() {
-        return regexs;
+    public Collection<String> getAllRegex() {
+        return regexs.values();
     }
 
     @Override
