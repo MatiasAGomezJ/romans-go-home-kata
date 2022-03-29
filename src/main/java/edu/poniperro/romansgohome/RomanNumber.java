@@ -1,27 +1,18 @@
 package edu.poniperro.romansgohome;
 
 
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RomanNumber {
     private String numeroRomano;
-    private HashMap<String, Short> regexs;
     private short numeroDecimal = 0;
+    private RomanNumberRegexs regexs = null;
 
     public RomanNumber(String numeroRomano) {
-        initRegexDicionario();
         this.numeroRomano = numeroRomano;
-    }
-
-    public void initRegexDicionario() {
-        regexs = new HashMap<>();
-        regexs.put("M", (short) 1000);
-        regexs.put("D", (short) 500);
-        regexs.put("C", (short) 100);
-        regexs.put("X", (short) 10);
-        regexs.put("I", (short) 1);
+        regexs = new RomanNumberRegexs();
     }
 
     public String getNumeroRomano() {
@@ -37,7 +28,7 @@ public class RomanNumber {
     }
 
     public short toDecimal() {
-        for (String key : regexs.keySet()) {
+        for (String key : getRegexsKeys()) {
             Matcher matcher = getMatcher(key);
 
             while (matcher.find()) {
@@ -56,11 +47,14 @@ public class RomanNumber {
         return LetrasRomanas.valueOf(group).getValorDecimal();
     }
 
-
     private Matcher getMatcher(String key) {
         Pattern pattern = Pattern.compile(key);
         Matcher matcher = pattern.matcher(getNumeroRomano());
         return matcher;
+    }
+
+    private Collection<String> getRegexsKeys() {
+        return regexs.getAllRegexs().keySet();
     }
 
     @Override
