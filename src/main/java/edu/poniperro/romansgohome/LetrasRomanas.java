@@ -12,8 +12,8 @@ public enum LetrasRomanas {
     C(100),
     D(500),
     CD(400),
-    M(9000),
-    CM(1000);
+    CM(900),
+    M(1000);
 
     private short valorDecimal;
 
