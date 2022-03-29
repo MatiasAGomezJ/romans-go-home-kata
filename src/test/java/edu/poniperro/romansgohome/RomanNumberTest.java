@@ -77,73 +77,73 @@ public class RomanNumberTest {
         assertNotEquals(3503, numeroRomano.toDecimal());
     }
 
-//    /**
-//     * Grupos sustractivos
-//     * IV(4), IX(9),
-//     * XL(40), XC(90),
-//     * CD(400), CM(900)
-//     */
-//
-//    @Test
-//    public void grupo_C_DM_test() {
-//
-//        String testCase = "UCDU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(400, numeroRomano.toDecimal());
-//
-//        testCase = "UCMU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(900, numeroRomano.toDecimal());
-//    }
+    /**
+     * Grupos sustractivos
+     * IV(4), IX(9),
+     * XL(40), XC(90),
+     * CD(400), CM(900)
+     */
 
-//    @Test
-//    public void grupo_X_LC_test() {
-//
-//        String testCase = "UXLU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(40, numeroRomano.toDecimal());
-//
-//        testCase = "UXCU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(90, numeroRomano.toDecimal());
-//    }
+    @Test
+    public void grupo_C_DM_test() {
 
-//    @Test
-//    public void grupo_I_VX_test() {
-//
-//        String testCase = "UIVU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(4, numeroRomano.toDecimal());
-//
-//        testCase = "UIXU";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(9, numeroRomano.toDecimal());
-//    }
+        String testCase = "UCDU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(400, numeroRomano.toDecimal());
 
-//    @Test
-//    public void grupos_sumatorios_tres_digitos_test() {
-//        String testCase = "MMMDCCCLXXXVIII"; // 3888
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(3888, numeroRomano.toDecimal());
-//    }
+        testCase = "UCMU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(900, numeroRomano.toDecimal());
+    }
 
-//    @Test
-//    public void grupos_sumatorios_test() {
-//        String testCase = "MMDCCLXXVII"; // 2777
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(2777, numeroRomano.toDecimal());
-//    }
+    @Test
+    public void grupo_X_LC_test() {
 
-//    @Test
-//    public void grupos_substractivos_test() {
-//        String testCase = "CDXLIV"; // 444
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(444, numeroRomano.toDecimal());
-//
-//        testCase = "CDXXXIX"; // 439
-//        numeroRomano = new RomanNumber(testCase);
-//        assertEquals(439, numeroRomano.toDecimal());
-//    }
+        String testCase = "UXLU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(40, numeroRomano.toDecimal());
+
+        testCase = "UXCU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(90, numeroRomano.toDecimal());
+    }
+
+    @Test
+    public void grupo_I_VX_test() {
+
+        String testCase = "UIVU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(4, numeroRomano.toDecimal());
+
+        testCase = "UIXU";
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(9, numeroRomano.toDecimal());
+    }
+
+    @Test
+    public void grupos_sumatorios_tres_digitos_test() {
+        String testCase = "MMMDCCCLXXXVIII"; // 3888
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(3888, numeroRomano.toDecimal());
+    }
+
+    @Test
+    public void grupos_sumatorios_test() {
+        String testCase = "MMDCCLXXVII"; // 2777
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(2777, numeroRomano.toDecimal());
+    }
+
+    @Test
+    public void grupos_substractivos_test() {
+        String testCase = "CDXLIV"; // 444
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(444, numeroRomano.toDecimal());
+
+        testCase = "CDXXXIX"; // 439
+        numeroRomano = new RomanNumber(testCase);
+        assertEquals(439, numeroRomano.toDecimal());
+    }
 
 //    /**
 //     * Test de la coleccion de
