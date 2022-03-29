@@ -28,7 +28,7 @@ public class RomanNumber {
     }
 
     public short toDecimal() {
-        for (String key : getRegexsKeys()) {
+        for (String key : getRegexsValues()) {
             Matcher matcher = getMatcher(key);
 
             while (matcher.find()) {
@@ -53,8 +53,8 @@ public class RomanNumber {
         return matcher;
     }
 
-    private Collection<String> getRegexsKeys() {
-        return regexs.getAllRegexs().keySet();
+    private Collection<String> getRegexsValues() {
+        return regexs.getAllRegexs().values();
     }
 
     @Override
