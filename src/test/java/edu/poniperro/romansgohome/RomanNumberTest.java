@@ -145,35 +145,35 @@ public class RomanNumberTest {
         assertEquals(439, numeroRomano.toDecimal());
     }
 
-//    /**
-//     * Test de la coleccion de
-//     * expresiones regulares
-//     */
-//
-//    @Test
-//    public void init_regex_collection_test() {
-//        String testCase = "V";
-//        numeroRomano = new RomanNumber(testCase);
-//        assertThat(numeroRomano.getRegexCollection().getAllRegex()).hasSize(2);
-//
-//        assertThat(numeroRomano.getRegexCollection().getAllRegex()).containsExactly("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])", "(C[DM])|(X[LC])|(I[VX])");
-//
-//        assertThat(numeroRomano.getRegexCollection().getRegex("grupoSumatorio")).isEqualTo("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])");
-//        assertThat(numeroRomano.getRegexCollection().getRegex("grupoSustractivo")).isEqualTo("(C[DM])|(X[LC])|(I[VX])");
-//    }
+    /**
+     * Test de la coleccion de
+     * expresiones regulares
+     */
 
-//    /**
-//     * Test del tipo enumerado
-//     * RomanSymbols
-//     */
-//    @ParameterizedTest
-//    @CsvSource({
-//            "5,   V",
-//            "4,   IV",
-//            "900, CM"
-//    })
-//    public void valor_decimal_test(Short decimal, String roman) {
-//        numeroRomano = new RomanNumber(roman);
-//        assertEquals(decimal, numeroRomano.decimalValue(roman));
-//    }
+    @Test
+    public void init_regex_collection_test() {
+        String testCase = "V";
+        numeroRomano = new RomanNumber(testCase);
+        assertThat(numeroRomano.getRegexCollection().getAllRegex()).hasSize(2);
+
+        assertThat(numeroRomano.getRegexCollection().getAllRegex()).containsExactly("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])", "(C[DM])|(X[LC])|(I[VX])");
+
+        assertThat(numeroRomano.getRegexCollection().getRegex("grupoSumatorio")).isEqualTo("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])");
+        assertThat(numeroRomano.getRegexCollection().getRegex("grupoSustractivo")).isEqualTo("(C[DM])|(X[LC])|(I[VX])");
+    }
+
+    /**
+     * Test del tipo enumerado
+     * RomanSymbols
+     */
+    @ParameterizedTest
+    @CsvSource({
+            "5,   V",
+            "4,   IV",
+            "900, CM"
+    })
+    public void valor_decimal_test(short decimal, String roman) {
+        numeroRomano = new RomanNumber(roman);
+        assertEquals(decimal, numeroRomano.decimalValue(roman));
+    }
 }
