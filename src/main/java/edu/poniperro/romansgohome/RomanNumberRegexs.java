@@ -12,6 +12,7 @@ public class RomanNumberRegexs {
 
     private void initRegexDicionario() {
         addRegex("grupo sumatorio", "(?<!C)[MD]|(?<!X)[CL](?![DM])|(?<!I)[XV](?![LC])|[I](?![VX])");
+        addRegex("grupo sustractivo", "C[MD]|X[CL]|I[XV]");
     }
 
     public void addRegex(String description, String regularExppresion) {
