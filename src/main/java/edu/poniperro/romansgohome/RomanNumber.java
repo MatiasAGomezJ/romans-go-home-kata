@@ -63,4 +63,8 @@ public class RomanNumber {
         return matcher;
     }
 
+    @Override
+    public String toString() {
+        return numeroRomano;
+    }
 }
