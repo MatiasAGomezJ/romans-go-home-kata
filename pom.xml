@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>romansgohome</name>
-    <url>https://www.github.com/AndreuSorell/romansgohome</url>
+    <url>https://github.com/MatiasAGomezJ/romans-go-home-kata</url>
 
     <properties>
         <!-- FIXME change it to the project's main class -->
@@ -105,11 +105,12 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>edu.poniperro.romansgohome.${main.class}</mainClass>
-                                <!-- https://maven.apache.org/shared/maven-archiver/examples/manifest.html -->
-                                <!-- addDefaultImplementationEntries bool -->
-                                <!-- addDefaultSpecificationEntries bool -->
+                                <addClasspath>true</addClasspath>
+                                <mainClass>edu.poniperro.romansgohome</mainClass>
                             </manifest>
+                            <manifestEntries>
+                                <url>${project.url}</url>
+                            </manifestEntries>
                         </archive>
                     </configuration>
                 </plugin>
